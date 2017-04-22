@@ -26,6 +26,8 @@
         --base: #ffc600;
         --spacing: 10px;
         --blur: 10px;
+        --font: 4em;
+          
     }
 
     img {
@@ -34,10 +36,14 @@
       filter: blur(var(--blur));
     }
 
+    h2 {
+      font-size: var(--font);
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
-    h1 {
+    .hl {
       color: var(--base);
     }
 
@@ -68,7 +74,6 @@
 
     function handleUpdate() {
       const suffix = this.dataset.sizing || "";
-      console.log(`--${this.name}`)
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
     }
 
